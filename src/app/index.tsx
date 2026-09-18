@@ -48,7 +48,8 @@ export default function Index() {
   
     
     <View style={styles.textpartTwo}>
-      <View style={styles.threeImages}>
+      <View style={styles.textWrapper}>
+        <View style={styles.threeImages}>
         <Image
           source={{ uri: 'https://media.istockphoto.com/id/856174332/photo/surprised-happy-beautiful-woman-looking-in-excitement.jpg'}}
           style={styles.roundImageButSmaller}
@@ -63,12 +64,24 @@ export default function Index() {
           />
           </View>
 
-      <Text>Liked by paisley.print.48 and 7 others</Text>
-      <Text> frenchie_fry39 Fresh shot on a sunny day! </Text>
-      <Text> View all 12 comments </Text>
-      <Text>lil_wyatt838 Awesome tones </Text>
-      <Text> pia.in.a.pod Gorg. Love it! </Text>
-      <Text> 1 day ago </Text>
+
+    
+        <Text style={styles.regularText}>
+          Liked by <Text style={styles.boldMoment}> paisley.print.48 </Text> and <Text style={styles.boldMoment}> 7 others</Text>
+         </Text>
+      </View>
+
+    <Text style={styles.regularText}>
+      <Text style={styles.boldMoment}>frenchie_fry39</Text> Fresh shot on a sunny day! </Text>
+
+      <Text style={styles.transparentishText}> View all 12 comments </Text>
+
+    <Text style={styles.regularText}>
+      <Text style={styles.boldMoment}>lil_wyatt838 </Text> Awesome tones </Text>
+    <Text style={styles.regularText}>
+      <Text style={styles.boldMoment}>pia.in.a.pod </Text> Gorg. Love it! </Text>
+
+      <Text style={styles.dayText}> 1 day ago </Text>
 
 
     </View>
@@ -109,6 +122,12 @@ const styles = StyleSheet.create({
 
   },
 
+  textWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+
   threeImages: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -144,6 +163,31 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
 
+  boldMoment: {
+    fontWeight: 'bold',
+  },
+
+  regularText: {
+    fontSize: 13,
+    color: '#262626',
+    marginBottom: 4,
+    marginLeft: 8,
+  },
+
+  transparentishText: {
+    fontSize: 13,
+    color: '#8e8e8e',
+    marginVertical: 2,
+    marginLeft: 8,
+  },
+
+  dayText: {
+    fontSize: 8,
+    color: '#8e8e8e',
+    marginTop: 2,
+    marginLeft: 8,
+  },
+
   imagecontainerTest: {
     flex: 3,
     width: '100%',
@@ -160,7 +204,7 @@ const styles = StyleSheet.create({
 
   textpartTwo: {
     flex: 2,
-    flexDirection: 'flex-start'
+    alignItems: 'flex-start'
   },
 
   buttonPush: {
