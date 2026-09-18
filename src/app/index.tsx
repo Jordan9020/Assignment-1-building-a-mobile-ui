@@ -48,6 +48,27 @@ export default function Index() {
   
     
     <View style={styles.textpartTwo}>
+      <View style={styles.threeImages}>
+        <Image
+          source={{ uri: 'https://media.istockphoto.com/id/856174332/photo/surprised-happy-beautiful-woman-looking-in-excitement.jpg'}}
+          style={styles.roundImageButSmaller}
+          />
+          <Image
+          source={{ uri: 'https://media.istockphoto.com/id/1138637828/photo/surprised-amazing-woman-isolated-on-white-background.jpg'}}
+          style={[styles.roundImageButSmaller, styles.overlap]}
+          />
+          <Image
+          source={{ uri: 'https://media.istockphoto.com/id/629771548/photo/surprised-happy-beautiful-woman-looking-sideways-in-excitement-isolated.jpg'}}
+          style={[styles.roundImageButSmaller, styles.overlap]}
+          />
+          </View>
+
+      <Text>Liked by paisley.print.48 and 7 others</Text>
+      <Text> frenchie_fry39 Fresh shot on a sunny day! </Text>
+      <Text> View all 12 comments </Text>
+      <Text>lil_wyatt838 Awesome tones </Text>
+      <Text> pia.in.a.pod Gorg. Love it! </Text>
+      <Text> 1 day ago </Text>
 
 
     </View>
@@ -77,6 +98,27 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginRight: 15,
     left: 15,
+  },
+
+  roundImageButSmaller: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    borderWidth: 1.5,
+    borderColor: '#fff',
+
+  },
+
+  threeImages: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 8,
+    marginLeft: 8,
+
+  },
+
+  overlap: {
+    marginLeft: -6,
   },
 
   topleftRow: {
@@ -118,6 +160,7 @@ const styles = StyleSheet.create({
 
   textpartTwo: {
     flex: 2,
+    flexDirection: 'flex-start'
   },
 
   buttonPush: {
