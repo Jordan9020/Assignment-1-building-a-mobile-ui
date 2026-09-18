@@ -1,6 +1,6 @@
 import { useState } from "react";
-import {Button, StyleSheet, Text, View, Alert, Image } from "react-native";
-
+import {Button, StyleSheet, Text, View, Alert, Image, TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function Index() {
 
@@ -28,7 +28,27 @@ export default function Index() {
         />
       </View>
 
+    <View style={styles.imitationButtons}>
+      <View style={styles.leftButtons}>
+      <TouchableOpacity style={styles.fakeButton}>
+        <Ionicons name="heart-outline" size={26} color="#000" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.fakeButton}>
+          <Ionicons name="chatbubble-outline" size={24} color="#000" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.fakeButton}>
+          <Ionicons name="paper-plane-outline" size={24} color="#000" />
+          </TouchableOpacity>
+          </View>
+      <TouchableOpacity>
+        <Ionicons name="bookmark-outline" size={24} color="#000" />
+      </TouchableOpacity>
+    </View>
+
+  
+    
     <View style={styles.textpartTwo}>
+
 
     </View>
 
@@ -48,8 +68,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'space-between'
-    
+    justifyContent: 'space-between',
   },
 
   roundimageSmall: {
@@ -64,6 +83,23 @@ const styles = StyleSheet.create({
 
     flexDirection: 'row',
     alignItems: 'center'
+  },
+
+  imitationButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+
+  leftButtons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  fakeButton: {
+    marginRight: 16,
   },
 
   imagecontainerTest: {

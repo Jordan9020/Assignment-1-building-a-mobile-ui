@@ -11,7 +11,7 @@ export default function RootLayout() {
           name="index"
           options={{
             headerTitle: () => (
-              <View>
+              <View style={styles.titleContainer}>
               <Text style= {styles.textNotSoBold}>OOTD_EVERYDAY</Text>
               <Text style= {styles.textBolder}>Posts</Text>
                 </View>
@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textNotSoBold: {
-    fontSize: 12
+    fontSize: 12,
+    color:  '#494949'
   },
   
   textBolder: {
