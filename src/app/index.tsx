@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
   imagecontainerTest: {
     flex: 3,
     width: '100%',
-    borderRadius: 12,
+    paddingTop: 10,
+    paddingBottom: 10,
     overflow: 'hidden',
   },
 
@@ -100,8 +101,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   screenSubtitle: {
-    fontSize: 10,
-    color: "#656883"
+    fontSize: 12,
+    color: "#27272c"
   }
 });
 
